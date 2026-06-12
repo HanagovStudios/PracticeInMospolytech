@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACM Manager — Менеджер плагинов для AutoCAD</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#hero" class="nav-logo">ACM<span>Manager</span></a>
+  <ul class="nav-links">
+    <li><a href="#hero">Главная</a></li>
+    <li><a href="#about">О проекте</a></li>
+    <li><a href="#team">Участники</a></li>
+    <li><a href="#journal">Журнал</a></li>
+    <li><a href="#resources">Ресурсы</a></li>
+  </ul>
+</nav>
+
+<!-- ГЛАВНАЯ -->
+<section class="hero" id="hero">
+  <div class="hero-badge">Московский Политех · Проектная практика 2026</div>
+  <h1>Менеджер плагинов<br>для <span class="gradient">AutoCAD</span></h1>
+  <p class="hero-sub">
+    Инструмент для управления расширениями AutoCAD в корпоративной среде.
+    Устанавливает плагины без прав администратора прямо из общей сетевой папки.
+  </p>
+  <div class="hero-actions">
+    <a href="#about" class="btn btn-primary">О проекте</a>
+    <a href="#journal" class="btn btn-ghost">Журнал работы</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">15%</span>
+      <span class="stat-label">времени BIM-менеджера<br>на техподдержку</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">прав администратора<br>не требуется</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">MVP</span>
+      <span class="stat-label">прототип<br>готов</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- О ПРОЕКТЕ -->
+<section class="section" id="about">
+  <span class="section-tag">О проекте</span>
+  <h2>Что такое ACM Manager</h2>
+  <p class="section-sub">
+    Десктопное приложение для управления плагинами AutoCAD в корпоративной среде,
+    разработанное в рамках проектной деятельности.
+  </p>
+
+  <div class="problem-block">
+    <div class="problem-text">
+      <h3>Проблема</h3>
+      <p>
+        Каждый раз при смене рабочего места или переустановке AutoCAD
+        инженер вручную ищет нужные плагины и сталкивается с правами доступа.
+        Стандартная папка AutoCAD лежит в Program Files, куда без администратора не залезть.
+      </p>
+      <ul class="problem-list">
+        <li>Сложный поиск плагинов в локальной сети компании</li>
+        <li>Конфликты версий и отсутствие стандартизации</li>
+        <li>UAC-ограничения при установке в Program Files</li>
+        <li>До 15% времени BIM-менеджера уходит на настройку рабочих мест</li>
+      </ul>
+    </div>
+    <div class="solution-block">
+      <h4>Решение</h4>
+      <ul class="solution-steps">
+        <li>
+          <span class="step-num">1</span>
+          <span>Открываешь приложение, видишь список плагинов из корпоративного хранилища</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span>Читаешь описание, смотришь версию</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span>Нажимаешь установку — плагин копируется в AppData без прав администратора</span>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <span>Перезапускаешь AutoCAD, плагин уже работает</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cards-grid" style="margin-top: 2rem;">
+    <div class="card">
+      <div class="card-icon blue">📦</div>
+      <h3>Установка плагинов</h3>
+      <p>Копирует .bundle-папку в %APPDATA%\Autodesk\ApplicationPlugins. Никаких прав администратора.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">📋</div>
+      <h3>Каталог из сети</h3>
+      <p>Подключается к сетевой папке компании и показывает список доступных плагинов с описанием.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">🗑️</div>
+      <h3>Удаление</h3>
+      <p>Чистое удаление установленного плагина одной кнопкой без следов в реестре.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon orange">👤</div>
+      <h3>Избранное</h3>
+      <p>Сохраняет список нужных плагинов для быстрого развёртывания на новом месте.</p>
+    </div>
+  </div>
+
+  <div class="stack-chips">
+    <div class="chip active">⚡ React + Vite</div>
+    <div class="chip active">🐍 Python</div>
+    <div class="chip active">🖥️ Electron</div>
+    <div class="chip">AutoCAD .bundle</div>
+    <div class="chip">AppData API</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- УЧАСТНИКИ -->
+<section class="section" id="team">
+  <span class="section-tag">Участники</span>
+  <h2>Разработчик</h2>
+  <p class="section-sub">Проект выполнен индивидуально.</p>
+
+  <div class="members-solo">
+    <div class="member-card">
+      <div class="member-avatar">ХД</div>
+      <div class="member-info">
+        <h3>Ханагов Даниэль Георгиевич</h3>
+        <div class="member-group">Группа 253-332 · 09.03.02 Информационные системы и технологии</div>
+        <p>
+          Разработал концепцию проекта, описал архитектуру и целевую аудиторию.
+          Настроил репозиторий Git, написал документацию в Markdown,
+          сверстал этот сайт на HTML/CSS.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-grid" style="margin-top: 2rem;">
+    <div class="card">
+      <div class="card-icon blue">🔍</div>
+      <h3>Исследование</h3>
+      <p>Изучил архитектуру плагинной системы AutoCAD и механизм установки через AppData без прав администратора.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">📝</div>
+      <h3>Документация</h3>
+      <p>Написал всю документацию по проекту в формате Markdown, описал цели, задачи и результаты.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">🌐</div>
+      <h3>Веб-сайт</h3>
+      <p>Сверстал сайт-презентацию проекта на чистом HTML/CSS без сторонних библиотек.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ЖУРНАЛ -->
+<section class="section" id="journal">
+  <span class="section-tag">Прогресс</span>
+  <h2>Журнал работы</h2>
+  <p class="section-sub">Записи о том, что делалось на каждом этапе практики. Без прикрас.</p>
+
+  <div class="journal-grid">
+
+    <div class="journal-card">
+      <div class="journal-date">
+        <span class="day">03</span>
+        <span class="month">июн 2026</span>
+      </div>
+      <div class="journal-body">
+        <span class="journal-tag">Git</span>
+        <h3>Настройка репозитория и структуры проекта</h3>
+        <p>
+          На первой неделе разобрался с Git и создал репозиторий по шаблону задания.
+          До этого с Git работал только на уровне "скачать и не трогать",
+          так что пришлось разобраться нормально.
+        </p>
+        <br>
+        <p>
+          Основная сложность была в понимании разницы между
+          <code style="background:rgba(91,127,255,0.15);padding:1px 5px;border-radius:4px">git add</code> и
+          <code style="background:rgba(91,127,255,0.15);padding:1px 5px;border-radius:4px">git commit</code>,
+          и почему изменения не уходят на GitHub сами по себе.
+          После нескольких попыток всё встало на место.
+        </p>
+        <br>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">
+          Что сделано: репозиторий по шаблону, структура папок docs/reports/site/task, корневой README.md, .gitignore.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="journal-date">
+        <span class="day">08</span>
+        <span class="month">июн 2026</span>
+      </div>
+      <div class="journal-body">
+        <span class="journal-tag purple">Markdown</span>
+        <h3>Документация по проекту</h3>
+        <p>
+          На этом этапе занимался документацией. Задача была описать проект ACM Manager
+          в формате Markdown так, чтобы было понятно что это, зачем и для кого.
+          Заодно разобрался, как GitHub рендерит Markdown прямо в интерфейсе репозитория.
+        </p>
+        <br>
+        <p>
+          Markdown оказался проще, чем казалось. Единственное что поначалу путало:
+          пробелы в конце строки для переноса без нового абзаца.
+        </p>
+        <br>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">
+          Что сделано: practice_documentation.md с журналом, таблица участников в README, описание проекта.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <div class="journal-date">
+        <span class="day">13</span>
+        <span class="month">июн 2026</span>
+      </div>
+      <div class="journal-body">
+        <span class="journal-tag blue">HTML/CSS</span>
+        <h3>Вёрстка статического сайта</h3>
+        <p>
+          Основная работа этапа: сверстать сайт про проект ACM Manager на чистом HTML и CSS
+          без фреймворков. Все разделы собраны на одной странице с навигацией по якорям.
+          Тёмная тема, адаптивность через Grid и Flexbox.
+        </p>
+        <br>
+        <p>
+          Самое сложное было сделать нормальный дизайн без Bootstrap.
+          Разобрался с CSS-переменными,
+          <code style="background:rgba(91,127,255,0.15);padding:1px 5px;border-radius:4px">backdrop-filter</code>
+          и <code style="background:rgba(91,127,255,0.15);padding:1px 5px;border-radius:4px">clamp()</code>
+          для адаптивных размеров шрифта.
+        </p>
+        <br>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">
+          Что сделано: один index.html со всеми разделами, style.css с тёмной темой, якорная навигация, адаптивность.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- РЕСУРСЫ -->
+<section class="section" id="resources">
+  <span class="section-tag">Ресурсы</span>
+  <h2>Полезные ссылки</h2>
+  <p class="section-sub">Материалы, которые использовались при работе над проектом и сайтом.</p>
+
+  <div class="resources-grid">
+    <a href="https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-8A6E44DA-BA10-4F04-80D9-D7E55E9BCCF8" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">🔧</div>
+      <div class="resource-text">
+        <span>AutoCAD Plugin Package</span>
+        <small>Официальная документация по .bundle-пакетам</small>
+      </div>
+    </a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">🌐</div>
+      <div class="resource-text">
+        <span>MDN HTML Elements</span>
+        <small>Справочник по HTML-элементам на русском</small>
+      </div>
+    </a>
+    <a href="https://developer.mozilla.org/ru/docs/Web/CSS" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">🎨</div>
+      <div class="resource-text">
+        <span>MDN CSS</span>
+        <small>Полная документация по CSS от Mozilla</small>
+      </div>
+    </a>
+    <a href="https://doka.guide" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">📖</div>
+      <div class="resource-text">
+        <span>Doka Guide</span>
+        <small>Русскоязычный справочник по HTML, CSS, JS</small>
+      </div>
+    </a>
+    <a href="https://git-scm.com/book/ru/v2" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">📦</div>
+      <div class="resource-text">
+        <span>Pro Git (на русском)</span>
+        <small>Полная книга по Git от официального сайта</small>
+      </div>
+    </a>
+    <a href="https://ru.hexlet.io/courses/intro_to_git" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">🎓</div>
+      <div class="resource-text">
+        <span>Курс по Git на Hexlet</span>
+        <small>Бесплатный курс с практическими заданиями</small>
+      </div>
+    </a>
+    <a href="https://skillbox.ru/media/code/chto_takoe_git_obyasnyaem_na_skhemakh/" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">📊</div>
+      <div class="resource-text">
+        <span>Git на схемах</span>
+        <small>Наглядное объяснение принципов работы Git</small>
+      </div>
+    </a>
+    <a href="https://github.com/mospol/practice-2025-1" class="resource-link" target="_blank" rel="noopener">
+      <div class="resource-icon">🐱</div>
+      <div class="resource-text">
+        <span>mospol/practice-2025-1</span>
+        <small>Шаблон репозитория и задание практики</small>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">
+    <strong>ACM Manager</strong> · Ханагов Даниэль, гр. 253-332
+  </div>
+  <div class="footer-right">Московский Политех · Проектная практика 2026</div>
+</footer>
+
+</body>
+</html>
